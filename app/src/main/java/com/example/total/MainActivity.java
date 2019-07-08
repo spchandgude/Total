@@ -112,7 +112,27 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 }
         ){
             @Override
-            protected Map<String, String> getParams() {
+            protected Map<String, String> getParams() throws AuthFailureError {
+                Map<String,String> params= new HashMap<>();
+                params.put("lpg_id",lpg_id);
+                params.put("first_name",first_name);
+                params.put("last_name",last_name);
+                params.put("contact_no",contact_no);
+                params.put("email_id",email_id);
+                params.put("state",state);
+                params.put("city",city);
+                params.put("pincode",pincode);
+                params.put("landmark",landmark);
+                params.put("addressline1",addressline1);
+                params.put("addressline2",addressline2);
+                params.put("adhaar_no",adhaar_no);
+                params.put("gst_no",gst_no);
+                params.put("password",password);
+
+                return params;
+            }
+            /*  @Override
+            protected Map<String, String> getParams() throws AuthFailureError{
 
                 Map<String,String> params= new HashMap<>();
                 params.put("lpg_id",lpg_id);
@@ -131,7 +151,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 params.put("password",password);
                 return params;
 
-            }
+
+            }*/
         };
 
         RequestQueue requestQueue = Volley.newRequestQueue(this);
