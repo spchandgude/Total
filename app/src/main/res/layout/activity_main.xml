@@ -1,18 +1,206 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollView1"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:layout_height="match_parent">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+        android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        tools:context="com.example.totallpgservice.Signup">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="phone"
+            android:hint="Enter LPG ID:"
+            android:ems="10"
+            android:id="@+id/id_lpg_id"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="phone"
+            android:ems="10"
+            android:hint="Enter Consumer no:"
+            android:id="@+id/id_consumer_no"
+            android:layout_below="@+id/id_lpg_id"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <EditText
+            android:id="@+id/id_consumer_first_name"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/id_consumer_no"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:ems="10"
+            android:hint="Enter First Name:"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/id_consumer_last_name"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/id_consumer_no"
+
+            android:layout_alignParentRight="true"
+            android:ems="10"
+            android:hint="Enter Last Name:"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="phone"
+            android:ems="10"
+            android:hint="Enter Contact no:"
+            android:id="@+id/id_consumer_contact_no"
+            android:layout_below="@+id/id_consumer_first_name"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:ems="10"
+            android:hint="Enter Email ID:"
+            android:id="@+id/id_consumer_email_id"
+            android:layout_below="@+id/id_consumer_contact_no"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+
+        <EditText
+            android:id="@+id/id_consumer_state"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/id_consumer_email_id"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:ems="10"
+            android:hint="Enter State:"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/id_consumer_city"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/id_consumer_email_id"
+
+            android:layout_alignParentRight="true"
+            android:ems="10"
+            android:hint="Enter City:"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/id_consumer_pincode"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/id_consumer_state"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:ems="10"
+            android:hint="Enter PINCODE:"
+            android:inputType="phone" />
+
+        <EditText
+            android:id="@+id/id_consumer_landmark"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/id_consumer_city"
+
+            android:layout_alignParentRight="true"
+            android:ems="10"
+            android:hint="Enter Landmark:"
+            android:inputType="text" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:ems="10"
+            android:hint="Address line1:"
+            android:id="@+id/id_consumer_addressline1"
+            android:layout_below="@+id/id_consumer_pincode"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:ems="10"
+            android:hint="Address line2:"
+            android:id="@+id/id_consumer_addressline2"
+            android:layout_below="@+id/id_consumer_addressline1"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <EditText
+            android:id="@+id/id_consumer_adhaar_no"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/id_consumer_addressline2"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:ems="10"
+            android:hint="Enter Adhaar No:"
+            android:inputType="number" />
+
+        <EditText
+            android:id="@+id/id_consumer_gst_no"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/id_consumer_adhaar_no"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:ems="10"
+            android:hint="Enter GST No:"
+            android:inputType="number" />
+
+
+
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:ems="10"
+            android:hint="Enter Password"
+            android:id="@+id/id_password"
+            android:layout_below="@+id/id_consumer_gst_no"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Signup"
+            android:id="@+id/btn_signup"
+            android:layout_below="@+id/id_password"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="42dp" />
+
+     <!--   <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Login"
+            android:id="@+id/btn_login"
+            android:layout_below="@+id/btn_signup"
+            android:layout_centerHorizontal="true" />
+        -->
+
+    </RelativeLayout>
+</ScrollView>
