@@ -112,7 +112,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 }
         ){
             @Override
-            protected Map<String, String> getPostParams() throws AuthFailureError {
+            protected Map<String, String> getParams() {
+
                 Map<String,String> params= new HashMap<>();
                 params.put("lpg_id",lpg_id);
                 params.put("first_name",first_name);
@@ -129,6 +130,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 params.put("gst_no",gst_no);
                 params.put("password",password);
                 return params;
+
             }
         };
 
