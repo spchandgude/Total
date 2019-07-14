@@ -50,6 +50,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        if(SharedPrefManager.getInstance(this).isLoggedIn()){
+            finish();
+            startActivity(new Intent(this, FirstActivity.class));
+            return;
+        }
+
         edit_lpg_id = (EditText) findViewById(R.id.id_lpg_id);
 
         edit_first_name = (EditText) findViewById(R.id.id_consumer_first_name);

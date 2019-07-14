@@ -34,6 +34,12 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
+        if(SharedPrefManager.getInstance(this).isLoggedIn()){
+            finish();
+            startActivity(new Intent(this, FirstActivity.class));
+            return;
+        }
+
         editTextEmail= (EditText) findViewById(R.id.editTextUsername);
         editTextPassword= (EditText)findViewById(R.id.editTextPassword);
         buttonLogin= (Button) findViewById(R.id.buttonLogin);
@@ -64,11 +70,8 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                                 SharedPrefManager.getInstance(getApplicationContext()).userLogin(obj.getString("lpg_id"),
                                         obj.getString("email_id")
                                         );
-                                Toast.makeText(
-                                        getApplicationContext(),
-                                        "User Login Successful",
-                                        Toast.LENGTH_LONG
-                                ).show();
+                               startActivity(new Intent(getApplicationContext(),FirstActivity.class));
+                               finish();
 
 
                             }
@@ -119,7 +122,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             userLogin();
         }
         if(view==textViewSignup){
-            startActivity(new Intent(this,MainActivity.class));
+            startActivity(new Intent(this,MainActivity .class));
         }
     }
 }
