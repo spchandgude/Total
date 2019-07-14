@@ -3,10 +3,12 @@ package com.example.total;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.android.volley.AuthFailureError;
@@ -24,6 +26,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+
     private EditText edit_lpg_id;
 
     private EditText edit_first_name;
@@ -41,6 +44,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private EditText edit_password;
     private Button buttonRegister;
     private ProgressDialog progressDialog;
+    private TextView textViewLogin;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -61,13 +65,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         edit_adhaar_no=(EditText) findViewById(R.id.id_consumer_adhaar_no);
         edit_gst_no=(EditText)  findViewById(R.id.id_consumer_gst_no);
         edit_password=(EditText) findViewById(R.id.id_password);
-
+        textViewLogin= (TextView) findViewById(R.id.textviewLogin);
         buttonRegister = (Button) findViewById(R.id.btn_signup);
         progressDialog = new ProgressDialog(this);
         buttonRegister.setOnClickListener(this);
+        textViewLogin.setOnClickListener(this);
     }
 
     private void registerUser(){
+
         final String lpg_id = edit_lpg_id.getText().toString().trim();
 
         final String first_name = edit_first_name.getText().toString().trim();
@@ -114,6 +120,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             @Override
             protected Map<String, String> getParams() throws AuthFailureError {
                 Map<String,String> params= new HashMap<>();
+
                 params.put("lpg_id",lpg_id);
                 params.put("first_name",first_name);
                 params.put("last_name",last_name);
@@ -170,6 +177,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View view) {
         if (view == buttonRegister)
             registerUser();
+        if (view== textViewLogin)
+            startActivity(new Intent(this,LoginActivity.class));
 
     }
 }

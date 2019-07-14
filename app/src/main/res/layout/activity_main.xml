@@ -201,6 +201,23 @@
             android:layout_below="@+id/btn_signup"
             android:layout_centerHorizontal="true" />
         -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btn_signup"
+            >
+
+            <TextView
+                android:id="@+id/textviewLogin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btn_signup"
+
+                android:text="Already registered?\n Click here to Login.."
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                android:textColorLink="#2196F3" />
+        </LinearLayout>
 
     </RelativeLayout>
 </ScrollView>
