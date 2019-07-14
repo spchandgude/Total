@@ -3,11 +3,13 @@ package com.example.total;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.android.volley.AuthFailureError;
@@ -26,6 +28,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     private EditText editTextEmail, editTextPassword;
     private Button buttonLogin;
     private ProgressDialog progressDialog;
+    private TextView textViewSignup;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,13 +37,13 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         editTextEmail= (EditText) findViewById(R.id.editTextUsername);
         editTextPassword= (EditText)findViewById(R.id.editTextPassword);
         buttonLogin= (Button) findViewById(R.id.buttonLogin);
-
+        textViewSignup= (TextView) findViewById(R.id.textviewSignup) ;
         progressDialog= new ProgressDialog(this);
         progressDialog.setMessage("Please Wait...");
 
 
         buttonLogin.setOnClickListener(this);
-
+        textViewSignup.setOnClickListener(this);
 
     }
 
@@ -114,6 +117,9 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     public void onClick(View view) {
         if(view==buttonLogin){
             userLogin();
+        }
+        if(view==textViewSignup){
+            startActivity(new Intent(this,MainActivity.class));
         }
     }
 }
