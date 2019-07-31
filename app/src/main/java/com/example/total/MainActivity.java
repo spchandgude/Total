@@ -26,7 +26,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
-
+    private EditText edit_consumer_no;
     private EditText edit_lpg_id;
 
     private EditText edit_first_name;
@@ -55,7 +55,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             startActivity(new Intent(this, FirstActivity.class));
             return;
         }
-
+        edit_consumer_no = (EditText) findViewById(R.id.id_consumer_no) ;
         edit_lpg_id = (EditText) findViewById(R.id.id_lpg_id);
 
         edit_first_name = (EditText) findViewById(R.id.id_consumer_first_name);
@@ -79,7 +79,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void registerUser(){
-
+        final String consumer_no = edit_consumer_no.getText().toString().trim();
         final String lpg_id = edit_lpg_id.getText().toString().trim();
 
         final String first_name = edit_first_name.getText().toString().trim();
@@ -126,7 +126,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             @Override
             protected Map<String, String> getParams() throws AuthFailureError {
                 Map<String,String> params= new HashMap<>();
-
+                params.put("consumer_no",consumer_no);
                 params.put("lpg_id",lpg_id);
                 params.put("first_name",first_name);
                 params.put("last_name",last_name);
