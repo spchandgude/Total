@@ -5,52 +5,60 @@
     android:id="@+id/activity_login"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="16dp"
-    android:paddingLeft="16dp"
-    android:paddingRight="16dp"
-    android:paddingTop="16dp"
     android:orientation="vertical"
+    android:paddingLeft="16dp"
+    android:paddingTop="16dp"
+    android:paddingRight="16dp"
+    android:paddingBottom="16dp"
     tools:context="com.example.total.FirstActivity">
 
 
-    <EditText
-        android:id="@+id/editText3"
-        android:layout_width="wrap_content"
-        android:layout_height="55dp"
-        android:ems="10"
-        android:hint="My Total"
-        android:inputType="textPersonName"
-        android:text="MY TOTAL"
-        tools:layout_editor_absoluteX="99dp"
-        tools:layout_editor_absoluteY="74dp" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="418dp"
+        android:layout_below="@+id/btn_signup"
+        android:orientation="vertical">
 
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="173dp"
-        android:layout_height="wrap_content"
-        android:text="Refill Order"
-        tools:layout_editor_absoluteX="116dp"
-        tools:layout_editor_absoluteY="192dp" />
+        <TextView
+            android:id="@+id/label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btn_signup"
 
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Refill Order History"
-        tools:layout_editor_absoluteX="112dp"
-        tools:layout_editor_absoluteY="277dp" />
-
-    <Button
-        android:id="@+id/button4"
-        android:layout_width="175dp"
-        android:layout_height="wrap_content"
-        android:text="Complaint"
-        tools:layout_editor_absoluteX="114dp"
-        tools:layout_editor_absoluteY="365dp" />
+            android:text="MY TOTAL"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            android:textColorLink="#2196F3" />
 
 
+        <Button
+            android:id="@+id/refill_order"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:text="Refill Order"
 
+            android:textAlignment="center"
+            tools:layout_editor_absoluteX="116dp"
+            tools:layout_editor_absoluteY="192dp" />
 
+        <Button
+            android:id="@+id/refill_order_history"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:text="Refill Order History"
+            android:textAlignment="center"
+            tools:layout_editor_absoluteX="112dp"
+            tools:layout_editor_absoluteY="277dp" />
+
+        <Button
+            android:id="@+id/complaint"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:text="Complaint"
+            android:textAlignment="center"
+            tools:layout_editor_absoluteX="114dp"
+            tools:layout_editor_absoluteY="365dp" />
+    </LinearLayout>
 
 
 </LinearLayout>

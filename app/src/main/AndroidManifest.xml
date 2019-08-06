@@ -12,11 +12,10 @@
         android:roundIcon="@mipmap/total"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".FirstActivity"></activity>
-        <activity
-            android:name=".HomeActivity"
-            android:label="@string/title_activity_home"
-            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".complaint"></activity>
+        <activity android:name=".RefillOrderHistory" />
+        <activity android:name=".RefillOrder" />
+        <activity android:name=".FirstActivity" />
         <activity android:name=".LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
