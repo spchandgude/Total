@@ -3,10 +3,6 @@ package com.example.total;
 import android.content.Context;
 import android.content.SharedPreferences;
 
-import com.android.volley.Request;
-import com.android.volley.RequestQueue;
-import com.android.volley.toolbox.Volley;
-
 public class SharedPrefManager {
     private static SharedPrefManager minstance;
 
@@ -15,6 +11,7 @@ public class SharedPrefManager {
     private static final String SHARED_PREF_NAME="mysharedpref12";
     private static final String Key_USER_ID="userid";
     private static final String KEY_USER_EMAIL="usermail";
+    private static final String KEY_USER_NO="consumer_no";
 
     private SharedPrefManager(Context context) {
         mCtx = context;
@@ -26,11 +23,13 @@ public class SharedPrefManager {
         }
         return minstance;
     }
-    public boolean userLogin(String id, String email){
+    public boolean userLogin(String id, String consumer_no  ,String email){
         SharedPreferences sharedPreferences = mCtx.getSharedPreferences(SHARED_PREF_NAME,Context.MODE_PRIVATE);
         SharedPreferences.Editor editor= sharedPreferences.edit();
         editor.putString(Key_USER_ID,id);
+        editor.putString(KEY_USER_NO,consumer_no);
         editor.putString(KEY_USER_EMAIL,email);
+
         editor.apply();;
         return true;
     }
@@ -49,6 +48,19 @@ public class SharedPrefManager {
         editor.clear();
         editor.apply();
         return true;
+    }
+
+    public String getLpgId(){
+        SharedPreferences sharedPreferences = mCtx.getSharedPreferences(SHARED_PREF_NAME,Context.MODE_PRIVATE);
+        return sharedPreferences.getString(Key_USER_ID,null);
+    }
+    public String getUserEmail(){
+        SharedPreferences sharedPreferences = mCtx.getSharedPreferences(SHARED_PREF_NAME,Context.MODE_PRIVATE);
+        return  sharedPreferences.getString(KEY_USER_EMAIL,null);
+    }
+    public String getConsumerNo(){
+        SharedPreferences sharedPreferences = mCtx.getSharedPreferences(SHARED_PREF_NAME,Context.MODE_PRIVATE);
+        return  sharedPreferences.getString(KEY_USER_NO,null);
     }
 
 }

@@ -23,7 +23,7 @@
             android:id="@+id/label"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/btn_signup"
+
 
             android:text="MY TOTAL"
             android:textAlignment="center"

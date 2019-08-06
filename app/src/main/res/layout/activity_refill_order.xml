@@ -1,9 +1,194 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".RefillOrder">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+<ScrollView
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:id="@+id/scrollView1"
+android:layout_width="match_parent"
+android:layout_height="match_parent">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/activity_login"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingLeft="16dp"
+        android:paddingTop="16dp"
+        android:paddingRight="16dp"
+        android:paddingBottom="16dp"
+        tools:context=".RefillOrder">
+        <TextView
+            android:id="@+id/label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+
+            android:text="Refill Order"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            android:textColorLink="#2196F3" />
+
+
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+
+            android:orientation="vertical">
+
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+
+                android:text="Enter Delivery Details"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                android:textColorLink="#2196F3" />
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+
+                android:text="LPG ID:"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/id_lpg_id2"
+                android:text="LPG ID:"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+
+                android:text="Consumer No:"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/id_consumer_no2"
+                android:text="Consumer No:"/>
+
+
+
+            <EditText
+                android:id="@+id/id_quantity1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="No of quantities of 8 Kg gas required "
+                android:inputType="number" />
+
+            <EditText
+                android:id="@+id/id_quantity2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="No of quantities of 12 Kg gas required "
+                android:inputType="number" />
+
+            <EditText
+                android:id="@+id/id_quantity3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="No of quantities of 17 Kg gas required "
+                android:inputType="number" />
+
+            <EditText
+                android:id="@+id/id_quantity4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="No of quantities of 33 Kg gas required "
+                android:inputType="number" />
+
+
+        </LinearLayout>
+
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:orientation="vertical">
+       <TextView
+
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+
+
+           android:text="Enter Prefered date and time of delivery"
+           android:textAlignment="center"
+           android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+           android:textColorLink="#2196F3" />
+
+       <EditText
+           android:id="@+id/id_prefered_date"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:hint="Enter prefered date DD/MM/YYYY "
+           android:inputType="date" />
+       <EditText
+           android:id="@+id/id_prefered_time"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:hint="Enter prefered time HH/MM "
+           android:inputType="time" />
+
+
+   </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+
+                android:text="Enter Shipping address"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                android:textColorLink="#2196F3" />
+            <EditText
+                android:id="@+id/id_shipping_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Address line "
+                android:inputType="text" />
+            <EditText
+                android:id="@+id/id_consumer_state2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="State"
+                android:inputType="text" />
+            <EditText
+                android:id="@+id/id_consumer_city2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="City "
+                android:inputType="text" />
+            <EditText
+                android:id="@+id/id_consumer_pincode2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Pincode"
+                android:inputType="number" />
+
+
+
+
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+
+</ScrollView>
