@@ -34,7 +34,7 @@
         <Button
             android:id="@+id/refill_order"
             android:layout_width="match_parent"
-            android:layout_height="70dp"
+            android:layout_height="75dp"
             android:text="Refill Order"
 
             android:textAlignment="center"
@@ -42,18 +42,9 @@
             tools:layout_editor_absoluteY="192dp" />
 
         <Button
-            android:id="@+id/refill_order_history"
-            android:layout_width="match_parent"
-            android:layout_height="70dp"
-            android:text="Refill Order History"
-            android:textAlignment="center"
-            tools:layout_editor_absoluteX="112dp"
-            tools:layout_editor_absoluteY="277dp" />
-
-        <Button
             android:id="@+id/complaint"
             android:layout_width="match_parent"
-            android:layout_height="70dp"
+            android:layout_height="75dp"
             android:text="Complaint"
             android:textAlignment="center"
             tools:layout_editor_absoluteX="114dp"

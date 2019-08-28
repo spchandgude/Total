@@ -17,7 +17,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class RefillOrder extends AppCompatActivity {
+    //Declaring screen components
     private TextView textViewLpgId, textViewConsumerNo;
+    //Declaring varibles for lpg id and consumer no holding
     String lpg_id,consumer_no;
     Button btn_send;
 
@@ -82,7 +84,8 @@ public class RefillOrder extends AppCompatActivity {
         String pincode= edit_pincode.getText().toString().trim();
 
         String phoneNo = Constants.MOBILE_NO;
-        String msg="This order is requested with\n"+ "LPG ID:"+lpg_id + " and Consumer no:"+ consumer_no + " \n8 kg quantity:"+quantity1+" \n12 kg quantity:"+quantity2+" \n17 kg quantity:"+quantity3+ " \n33 kg quantity:"+quantity4 ;
+        String msg="This order is requested with\n"+ "LPG ID:"+lpg_id + " and Consumer no:"+ consumer_no + " \n8 kg quantity:"+quantity1+" \n12 kg quantity:"+quantity2+" \n17 kg quantity:"+quantity3+ " \n33 kg quantity:"+quantity4;
+
 
         if(!edit_quantity1.getText().toString().equals("") && !edit_quantity2.getText().toString().equals("") || !edit_quantity3.getText().toString().equals("") || !edit_quantity4.getText().toString().equals("")
                 || !edit_prefered_date.getText().toString().equals("") && !edit_prefered_time.getText().toString().equals("") && !edit_addressline.getText().toString().equals("")

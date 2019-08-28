@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.SharedPreferences;
 
 public class SharedPrefManager {
+    //Declaring components
     private static SharedPrefManager minstance;
 
    // private ImageLoader imageLoader;
@@ -23,7 +24,7 @@ public class SharedPrefManager {
         }
         return minstance;
     }
-    public boolean userLogin(String id, String consumer_no  ,String email){
+    public boolean userLogin(String id, String consumer_no  ,String email){//
         SharedPreferences sharedPreferences = mCtx.getSharedPreferences(SHARED_PREF_NAME,Context.MODE_PRIVATE);
         SharedPreferences.Editor editor= sharedPreferences.edit();
         editor.putString(Key_USER_ID,id);

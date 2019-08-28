@@ -26,6 +26,9 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+
+
+    //Declaring Elements on Main Screen (Signup Screnn)
     private EditText edit_consumer_no;
     private EditText edit_lpg_id;
 
@@ -55,6 +58,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             startActivity(new Intent(this, FirstActivity.class));
             return;
         }
+
+        //Casting of all elements
         edit_consumer_no = (EditText) findViewById(R.id.id_consumer_no) ;
         edit_lpg_id = (EditText) findViewById(R.id.id_lpg_id);
 
@@ -78,7 +83,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         textViewLogin.setOnClickListener(this);
     }
 
-    private void registerUser(){
+    private void registerUser(){        //Signup function
+        //Storing values from app interface to variables
         final String consumer_no = edit_consumer_no.getText().toString().trim();
         final String lpg_id = edit_lpg_id.getText().toString().trim();
 
@@ -126,6 +132,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             @Override
             protected Map<String, String> getParams() throws AuthFailureError {
                 Map<String,String> params= new HashMap<>();
+                //Generation of string for pasrsing the POST request to web service
                 params.put("consumer_no",consumer_no);
                 params.put("lpg_id",lpg_id);
                 params.put("first_name",first_name);
@@ -144,29 +151,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
                 return params;
             }
-            /*  @Override
-            protected Map<String, String> getParams() throws AuthFailureError{
 
-                Map<String,String> params= new HashMap<>();
-                params.put("lpg_id",lpg_id);
-                params.put("first_name",first_name);
-                params.put("last_name",last_name);
-                params.put("contact_no",contact_no);
-                params.put("email_id",email_id);
-                params.put("state",state);
-                params.put("city",city);
-                params.put("pincode",pincode);
-                params.put("landmark",landmark);
-                params.put("addressline1",addressline1);
-                params.put("addressline2",addressline2);
-                params.put("adhaar_no",adhaar_no);
-                params.put("gst_no",gst_no);
-                params.put("password",password);
-                return params;
-
-
-
-            }*/
         };
 
       /*
@@ -180,7 +165,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 
     @Override
-    public void onClick(View view) {
+    public void onClick(View view) {            //Intents
         if (view == buttonRegister)
             registerUser();
         if (view== textViewLogin)

@@ -14,7 +14,6 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".complaint"></activity>
-        <activity android:name=".RefillOrderHistory" />
         <activity android:name=".RefillOrder" />
         <activity android:name=".FirstActivity" />
         <activity android:name=".LoginActivity">

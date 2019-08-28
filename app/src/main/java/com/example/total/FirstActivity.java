@@ -12,7 +12,7 @@ import android.widget.Button;
 import android.widget.Toast;
 
  public class FirstActivity extends AppCompatActivity implements View.OnClickListener{
-    private Button refillOrder,refillOrderHistory,complaint;
+    private Button refillOrder,complaint;                           // Button declaration
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,32 +23,30 @@ import android.widget.Toast;
             startActivity(new Intent(this,LoginActivity.class));
         }
 
-        refillOrder=(Button) findViewById(R.id.refill_order);
-        refillOrderHistory=(Button) findViewById(R.id.refill_order_history);
-        complaint=(Button) findViewById(R.id.complaint);
-        refillOrder.setOnClickListener(this);
-        refillOrderHistory.setOnClickListener(this);
-        complaint.setOnClickListener(this);
+        refillOrder=(Button) findViewById(R.id.refill_order);       //casting button
+
+        complaint=(Button) findViewById(R.id.complaint);            //casting button
+        refillOrder.setOnClickListener(this);                       //setting listener
+
+        complaint.setOnClickListener(this);                         //setting listener
 
     }
 
      @Override
-     public boolean onCreateOptionsMenu(Menu menu) {
+     public boolean onCreateOptionsMenu(Menu menu) {                //option menu
          getMenuInflater().inflate(R.menu.menu, menu);
          return true;
      }
 
      @Override
-     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+     public boolean onOptionsItemSelected(@NonNull MenuItem item) {         //menu function for logout
         switch (item.getItemId()){
             case R.id.menuLogout:
                 SharedPrefManager.getInstance(this).logout();
                 finish();
                 startActivity(new Intent(this,LoginActivity.class));
                 break;
-            case R.id.menuSettings:
-                Toast.makeText(this,"You clicked Settings..",Toast.LENGTH_LONG).show();
-                break;
+
 
 
         }
@@ -57,13 +55,11 @@ import android.widget.Toast;
      }
 
      @Override
-     public void onClick(View view) {
+     public void onClick(View view) {                   //Intent
          if(view==refillOrder){
              startActivity(new Intent(this,RefillOrder.class));
          }
-         if(view==refillOrderHistory){
-             startActivity(new Intent(this,RefillOrderHistory.class));
-         }
+
          if(view==complaint){
              startActivity(new Intent(this,complaint.class));
          }

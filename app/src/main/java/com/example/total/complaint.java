@@ -66,7 +66,7 @@ public class complaint extends AppCompatActivity {
 
 
         String phoneNo = Constants.MOBILE_NO;
-        String msg="This compalint has been submitted with\n"+ "LPG ID:"+lpg_id + " and Consumer no:"+ consumer_no + "\n"+complaint ;
+        String msg="This complaint has been submitted with\n"+ "LPG ID:"+lpg_id + " and Consumer no:"+ consumer_no + "\n"+complaint ;
 
         if(!edit_complaint.getText().toString().equals("") ) {
             SmsManager smsManager = SmsManager.getDefault();

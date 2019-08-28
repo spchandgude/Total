@@ -25,10 +25,10 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener{
-    private EditText editTextEmail, editTextPassword;
-    private Button buttonLogin;
-    private ProgressDialog progressDialog;
-    private TextView textViewSignup;
+    private EditText editTextEmail, editTextPassword;           //Declare Edittexts for mail and password
+    private Button buttonLogin;                                 //Login Button
+    private ProgressDialog progressDialog;                      //Progress circle
+    private TextView textViewSignup;                            //Declare Signup textview
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,7 +40,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             return;
         }
 
-        editTextEmail= (EditText) findViewById(R.id.editTextUsername);
+        editTextEmail= (EditText) findViewById(R.id.editTextUsername);          //Casting elements on screen
         editTextPassword= (EditText)findViewById(R.id.editTextPassword);
         buttonLogin= (Button) findViewById(R.id.buttonLogin);
         textViewSignup= (TextView) findViewById(R.id.textviewSignup) ;
@@ -48,12 +48,12 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         progressDialog.setMessage("Please Wait...");
 
 
-        buttonLogin.setOnClickListener(this);
+        buttonLogin.setOnClickListener(this);                   //Setting listeners for Intents
         textViewSignup.setOnClickListener(this);
 
     }
 
-    private void userLogin(){
+    private void userLogin(){                                   //Consuner Login Function
         final String email= editTextEmail.getText().toString().trim();
         final String password= editTextPassword.getText().toString().trim();
         progressDialog.show();
